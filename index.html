@@ -27,16 +27,16 @@
     <title>THREE AIR</title>
     <style>
       @keyframes Slide {
-        25% {
-          left: -125%;
+        50% {
+          opacity: 1;
         }
-        75% {
-          left: 125%;
+        100% {
+          left: -100%;
         }
       }
       @keyframes Opacity {
         50% {
-          opacity: 0.25;
+          opacity: 1;
         }
       }
 
@@ -68,17 +68,18 @@
         position: relative;
         display: block;
         overflow: hidden;
-        opacity: 1;
-        animation: Opacity 2500ms ease-in-out infinite;
+        opacity: 0.25;
+        animation: Opacity 3500ms ease-in-out infinite;
       }
       .title hr {
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 100%;
         width: 100%;
         border-width: 1px;
         box-sizing: border-box;
-        animation: Slide 7500ms ease-in-out infinite;
+        opacity: 0;
+        animation: Slide 3500ms ease-in-out infinite;
       }
     </style>
   </head>
