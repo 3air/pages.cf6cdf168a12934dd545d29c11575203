@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>THREE AIR</title>
     <style>
-      @keyframes slide {
+      @keyframes Slide {
         25% {
           left: -125%;
         }
         75% {
           left: 125%;
+        }
+      }
+      @keyframes Opacity {
+        50% {
+          opacity: 0.25;
         }
       }
 
@@ -27,16 +32,23 @@
         text-align: center;
       }
       .container {
+        position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
       }
       .title {
         position: relative;
         display: block;
         overflow: hidden;
+        opacity: 1;
+        animation: Opacity 5000ms ease-in-out infinite;
       }
       .title hr {
         position: absolute;
@@ -45,7 +57,7 @@
         width: 100%;
         border-width: 1px;
         box-sizing: border-box;
-        animation: slide 7500ms ease-in-out infinite;
+        animation: Slide 7500ms ease-in-out infinite;
       }
     </style>
   </head>
